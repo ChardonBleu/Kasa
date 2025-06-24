@@ -1,1 +1,12 @@
 @use "base/base";
+
+@import 'abstracts/variables';
+
+@import 'layout/about';
+@import 'layout/error';
+@import 'layout/home';
+@import 'layout/housing';
+
+@import 'components/header';
+@import 'components/footer';
+
