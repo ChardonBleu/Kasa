@@ -1,14 +1,18 @@
-import "./css/style.css";
-import kasaLogo from '/logo.png'
+import { Outlet } from "react-router";
+import Header from "./components/Header.jsx"
+import Footer from "./components/Footer.jsx"
 
 export default function App() {
 
   return (
     <>
-      <div className="hello">
-        <p>Projet 11</p>
-        <img src={kasaLogo} alt="logo kasa"></img>
-      </div>
+      <Header />
+
+      <main>
+        <Outlet />
+      </main>
+
+      <Footer />
     </>
   );
 }
