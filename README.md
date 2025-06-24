@@ -46,11 +46,15 @@ npm run test
 
 Ressources:
 
-- Documentation Réact [Démarrage](https://fr.react.dev/learn).
+- Documentation Réact [https://fr.react.dev/learn](https://fr.react.dev/learn).  
 
-- Documentation Vite [Démarrage](https://vitejs.fr/guide/).
+- Documentation Vite [https://vitejs.fr/guide/](https://vitejs.fr/guide/).  
 
-- Documentation TypeScript avec React [Démarrage](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/basic_type_example).
+- Documentation TypeScript avec React [https://react-typescript-cheatsheet.netlify.app/docs](https://react-typescript-cheatsheet.netlify.app/docs/basic/getting-started/basic_type_example).  
+
+- documentation React Router [https://reactrouter.com/home](https://reactrouter.com/home)  
+
+- Router React V7 par PedroTech [https://www.youtube.com/watch?v=h7MTWLv3xvw](https://www.youtube.com/watch?v=h7MTWLv3xvw)  
 
 ## Remerciements
 

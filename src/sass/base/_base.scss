@@ -1,6 +1,10 @@
-.hello{
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+body {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  @include montserrat-medium;
+  font-size: $base-font-size;
+  max-width: 1440px;
+  width: 90%;
+  margin: auto;
 }
