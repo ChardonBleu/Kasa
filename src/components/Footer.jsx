@@ -2,11 +2,11 @@ export default function Header() {
 
   return (
     <>
-      <header>
+      <footer>
         <div className="hello">
           <p>footer</p>
         </div>
-      </header>
+      </footer>
     </>
   );
 }

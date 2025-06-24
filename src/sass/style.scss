@@ -1,6 +1,7 @@
-@use "base/base";
-
+@import 'abstracts/typography';
 @import 'abstracts/variables';
+
+@import "base/base";
 
 @import 'layout/about';
 @import 'layout/error';

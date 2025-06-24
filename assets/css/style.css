@@ -1,6 +1,22 @@
-.hello {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url("https://fonts.cdnfonts.com/css/montserrat");
+body {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  max-width: 1440px;
+  width: 90%;
+  margin: auto;
+}
+
+header {
+  border-color: blue;
+  border-style: solid;
+}
+
+footer {
+  border-color: blue;
+  border-style: solid;
 }/*# sourceMappingURL=style.css.map */

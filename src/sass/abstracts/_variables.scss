@@ -1,0 +1,28 @@
+@use 'sass:color';
+
+// **************  colors **************
+$red: #FF6060;
+$grey-light: #F6F6F6;
+
+$shadow1: #0A0A0A;
+$shadow2: #040404;
+
+$empty-star: #e3E3E3;
+$secondary: #FF79DA;
+
+
+// **************  responsive **************
+$medium: 768px;
+$large: 992px;
+$xl: 1440px;
+
+$medium-up: "only screen and (min-width: #{$medium})";
+$large-up: "only screen and (min-width: #{$large})";
+$xl-up: "only screen and (min-width: #{$xl})";
+
+// **************  fonts  **************
+$base-font-number: 18;
+$base-font-size: #{$base-font-number}px;
+
+// **************  animations  **************
+$base-duration: 300ms; // ms
