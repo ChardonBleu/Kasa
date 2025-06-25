@@ -1,24 +1,19 @@
-import { useParams, useNavigate } from 'react-router';
-import { useEffect } from 'react';
+// import { useParams } from 'react-router';
+import { useLoaderData } from "react-router";
+import { Navigate } from "react-router";
 
 export default function Housing() {
-  const { housingId } = useParams()
-  const navigate = useNavigate()
+  const { housing } = useLoaderData();
 
-  useEffect(() => {
-      // housingId doit être un nombre
-      if (!/^\d+$/.test(housingId)) {
-        navigate('404'); // Redirige vers la page 404
-      }
-    }, [housingId, navigate]);
-
+  if (!housing) {
+    return <Navigate to="/Kasa/404" replace />;
+  }
 
   return (
     <>
-        <div>
-            <p>Détail du logement { housingId }</p>
-        </div>
-
+      <div>
+        <p>Détail du logement {housing.title}</p>
+      </div>
     </>
   );
 }

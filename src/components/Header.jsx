@@ -1,8 +1,7 @@
-import { NavLink } from 'react-router';
-import kasaLogo from '/logo.png'
+import { NavLink } from "react-router";
+import kasaLogo from "/logo.png";
 
 export default function Header() {
-
   return (
     <>
       <header>
@@ -11,8 +10,8 @@ export default function Header() {
           <img src={kasaLogo} alt="logo kasa"></img>
         </div>
         <nav>
-          <NavLink to="/kasa">Accueil - </NavLink>
-          <NavLink to="/kasa/about">A Propos</NavLink>
+          <NavLink to="/Kasa/">Accueil - </NavLink>
+          <NavLink to="/Kasa/about">A Propos</NavLink>
         </nav>
       </header>
     </>

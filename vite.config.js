@@ -4,5 +4,5 @@ import react from "@vitejs/plugin-react";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/Kasa/', // Remplacez <nom-du-depot> par le nom de votre dépôt GitHub
+  base: "/Kasa/", //  nom du dépôt GitHub pour le déploiement vers les github pages
 });

@@ -1,24 +1,60 @@
 import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route, Navigate } from "react-router";
+import { createBrowserRouter, RouterProvider } from "react-router";
 import App from "./App.jsx";
-import Housing from "./routes/Housing.jsx"
-import About from "./routes/About.jsx"
-import Error404 from "./routes/Error404.jsx"
-import Kasa from "./routes/Kasa.jsx"
+import Housing from "./routes/Housing.jsx";
+import About from "./routes/About.jsx";
+import Error404 from "./routes/Error404.jsx";
+import Kasa from "./routes/Kasa.jsx";
+import NotFoundRedirect from "./components/RedirectEroor.jsx";
+
+async function getHousings() {
+  const response = await fetch("datas/datas.json");
+  if (response.ok) {
+    const housings = await response.json();
+    return housings;
+  } else {
+    throw new Error("Erreur de chargement des données");
+  }
+}
+
+async function getHousing(id) {
+  const response = await fetch("datas/datas.json");
+  if (response.ok) {
+    const housings = await response.json();
+    const housing = housings.filter((housing) => housing.id === id)[0];
+    return housing;
+  } else {
+    throw new Error("Erreur de chargement des données");
+  }
+}
+
+const router = createBrowserRouter([
+  {
+    path: "Kasa",
+    Component: App,
+    children: [
+      {
+        index: true,
+        Component: Kasa,
+        loader: async () => {
+          return { housings: await getHousings() };
+        },
+      },
+      { path: "about", Component: About },
+      {
+        path: ":housingId",
+        Component: Housing,
+        loader: async ({ params }) => {
+          return { housing: await getHousing(params.housingId) };
+        },
+      },
+      { path: "404", Component: Error404 },
+      { path: "*", Component: NotFoundRedirect },
+    ],
+  },
+  { path: "*", Component: NotFoundRedirect },
+]);
 
 const root = document.getElementById("root");
 
-ReactDOM.createRoot(root).render(
-  <BrowserRouter>
-    <Routes>
-      <Route path="/kasa" element={<App />}>
-        <Route index element={<Kasa />} />
-        <Route path=":housingId" element={<Housing />} />
-        <Route path="about" element={<About />} />
-        <Route path="404" element={<Error404 />} />
-        <Route path="*" element={<Error404 />} />
-      </Route>
-      <Route path="*" element={<Navigate to="/kasa/404" replace />} />
-    </Routes>
-  </BrowserRouter>
-);
+ReactDOM.createRoot(root).render(<RouterProvider router={router} />);

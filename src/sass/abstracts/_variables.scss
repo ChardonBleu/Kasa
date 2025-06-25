@@ -1,15 +1,14 @@
-@use 'sass:color';
+@use "sass:color";
 
 // **************  colors **************
-$red: #FF6060;
-$grey-light: #F6F6F6;
+$red: #ff6060;
+$grey-light: #f6f6f6;
 
-$shadow1: #0A0A0A;
+$shadow1: #0a0a0a;
 $shadow2: #040404;
 
-$empty-star: #e3E3E3;
-$secondary: #FF79DA;
-
+$empty-star: #e3e3e3;
+$secondary: #ff79da;
 
 // **************  responsive **************
 $medium: 768px;
