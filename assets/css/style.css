@@ -11,12 +11,50 @@ body {
   margin: auto;
 }
 
-header {
-  border-color: blue;
-  border-style: solid;
+a {
+  text-decoration: none;
+  color: black;
 }
 
-footer {
-  border-color: blue;
-  border-style: solid;
-} /*# sourceMappingURL=style.css.map */
+a.active {
+  text-decoration: underline;
+}
+
+.header {
+  margin-top: 45px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 57px;
+  color: black;
+  font-size: 24px;
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    margin-top: 20px;
+    margin-bottom: 27px;
+  }
+  .header__nav {
+    gap: 26px;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+}
+.footer {
+  color: white;
+  background-color: black;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding-top: 80px;
+  padding-bottom: 15px;
+}/*# sourceMappingURL=style.css.map */
