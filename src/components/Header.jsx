@@ -7,7 +7,7 @@ export default function Header() {
     <>
       <header className="header">
         <picture>
-          <source media="(max-width: 768px)" srcset={kasaLogo}></source>
+          <source media="(max-width: 768px)" srcSet={kasaLogo}></source>
           <img src={kasaLogoLarge} alt="logo kasa" className="logo"></img>
         </picture>
 

@@ -3,10 +3,12 @@
 
 @import "base/base";
 
+@import "components/header";
+@import "components/footer";
+@import "components/banner";
+@import "components/card";
+
 @import "layout/about";
 @import "layout/error";
 @import "layout/home";
 @import "layout/housing";
-
-@import "components/header";
-@import "components/footer";
