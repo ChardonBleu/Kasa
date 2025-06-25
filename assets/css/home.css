@@ -1,1 +1,22 @@
-/*# sourceMappingURL=home.css.map */
+.banner {
+  margin-bottom: 43px;
+  margin-top: 50px;
+  position: relative;
+}
+.banner__img {
+  border-radius: 20px;
+  height: 223px;
+  width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+.banner__text {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  margin: 0;
+  width: 100%;
+  height: 223px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+} /*# sourceMappingURL=home.css.map */

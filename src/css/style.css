@@ -69,6 +69,36 @@ a.active {
     font-size: 14px;
   }
 }
+.banner {
+  margin-bottom: 43px;
+  margin-top: 50px;
+  position: relative;
+}
+.banner__img {
+  border-radius: 20px;
+  height: 223px;
+  width: 100%;
+  object-fit: cover;
+}
+.banner__text {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  margin: 0;
+  width: 100%;
+  height: 223px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .header {
   margin-top: 45px;
   margin-bottom: 50px;
