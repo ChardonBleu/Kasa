@@ -1,1 +1,14 @@
-/*# sourceMappingURL=error.css.map */
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 139px;
+  margin-top: 89px;
+  margin-bottom: 139px;
+}
+.error__status {
+  color: var(red-light);
+}
+.error__message {
+  color: var(red-light);
+} /*# sourceMappingURL=error.css.map */

@@ -1,10 +1,11 @@
+import kasaBW from "/logoBW.png";
+
 export default function Header() {
   return (
     <>
-      <footer>
-        <div className="hello">
-          <p>footer</p>
-        </div>
+      <footer className="footer">
+        <img src={kasaBW} alt="logo kasa" className="logo"></img>
+        <p>© 2020 Kasa. All rights reserved</p>
       </footer>
     </>
   );

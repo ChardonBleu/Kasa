@@ -1,7 +1,7 @@
 @use "sass:color";
 
 // **************  colors **************
-$red: #ff6060;
+$red-light: #ff6060;
 $grey-light: #f6f6f6;
 
 $shadow1: #0a0a0a;
@@ -15,9 +15,9 @@ $medium: 768px;
 $large: 992px;
 $xl: 1440px;
 
-$medium-up: "only screen and (min-width: #{$medium})";
-$large-up: "only screen and (min-width: #{$large})";
-$xl-up: "only screen and (min-width: #{$xl})";
+$medium-up: "only screen and (max-width: #{$medium})";
+$large-up: "only screen and (max-width: #{$large})";
+$xl-up: "only screen and (max-width: #{$xl})";
 
 // **************  fonts  **************
 $base-font-number: 18;

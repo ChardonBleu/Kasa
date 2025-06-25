@@ -1,0 +1,39 @@
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 139px;
+  margin-top: 89px;
+  margin-bottom: 139px;
+  &__status {
+    padding: 0;
+    margin: 0;
+    color: $red-light;
+    font-size: 288px;
+    @include montserrat-bold;
+  }
+  &__message {
+    padding: 0;
+    margin: 0;
+    color: $red-light;
+    font-size: 36px;
+    text-align: center;
+  }
+}
+
+@media #{$medium-up} {
+  .error {
+    margin-top: 53px;
+    margin-bottom: 113px;
+    &__status {
+      font-size: 96px;
+    }
+    &__message {
+      font-size: 18px;
+    }
+    a {
+      font-size: 14px;
+    }
+  }
+}
