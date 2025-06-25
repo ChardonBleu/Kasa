@@ -11,7 +11,7 @@
     "deploy": "gh-pages -d dist",
     "lint": "eslint .",
     "preview": "vite preview",
-    "fmt --fix": "npx prettier . --write",
+    "fmtfix": "npx prettier . --write",
     "fmt": "npx prettier . --check"
   },
   "dependencies": {

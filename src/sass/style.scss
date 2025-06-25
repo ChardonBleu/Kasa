@@ -1,13 +1,12 @@
-@import 'abstracts/typography';
-@import 'abstracts/variables';
+@import "abstracts/typography";
+@import "abstracts/variables";
 
 @import "base/base";
 
-@import 'layout/about';
-@import 'layout/error';
-@import 'layout/home';
-@import 'layout/housing';
+@import "layout/about";
+@import "layout/error";
+@import "layout/home";
+@import "layout/housing";
 
-@import 'components/header';
-@import 'components/footer';
-
+@import "components/header";
+@import "components/footer";
