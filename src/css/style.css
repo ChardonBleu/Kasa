@@ -6,8 +6,12 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 18px;
-  max-width: 1440px;
-  width: 90%;
+  margin: auto;
+  margin-top: 40px;
+}
+
+main {
+  width: 85%;
   margin: auto;
 }
 
@@ -20,12 +24,59 @@ a.active {
   text-decoration: underline;
 }
 
+@media only screen and (max-width: 768px) {
+  main {
+    width: 95%;
+  }
+}
+.error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 139px;
+  margin-top: 89px;
+  margin-bottom: 139px;
+}
+.error__status {
+  padding: 0;
+  margin: 0;
+  color: #ff6060;
+  font-size: 288px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+.error__message {
+  padding: 0;
+  margin: 0;
+  color: #ff6060;
+  font-size: 36px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .error {
+    margin-top: 53px;
+    margin-bottom: 113px;
+  }
+  .error__status {
+    font-size: 96px;
+  }
+  .error__message {
+    font-size: 18px;
+  }
+  .error a {
+    font-size: 14px;
+  }
+}
 .header {
   margin-top: 45px;
   margin-bottom: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 85%;
+  margin: auto;
 }
 .header__nav {
   display: flex;
@@ -39,6 +90,7 @@ a.active {
   .header {
     margin-top: 20px;
     margin-bottom: 27px;
+    width: 95%;
   }
   .header__nav {
     gap: 26px;
@@ -57,6 +109,19 @@ a.active {
   gap: 25px;
   padding-top: 80px;
   padding-bottom: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer {
+    font-size: 12px;
+    gap: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .footer p {
+    width: 115px;
+    text-align: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

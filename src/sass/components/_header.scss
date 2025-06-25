@@ -1,27 +1,30 @@
 .header {
-    margin-top:45px;
-    margin-bottom: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  margin-top: 45px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  margin: auto;
 
-    &__nav {
-        display:flex;
-        justify-content: space-between;
-        gap:57px;
-        color:black;
-        font-size: 24px;
-    }
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 57px;
+    color: black;
+    font-size: 24px;
+  }
 }
 
 @media #{$medium-up} {
-    .header {
-        margin-top:20px;
-        margin-bottom: 27px;
-        &__nav {
-            gap:26px;
-            font-size: 12px;
-            text-transform: uppercase;
-        }
+  .header {
+    margin-top: 20px;
+    margin-bottom: 27px;
+    width: 95%;
+    &__nav {
+      gap: 26px;
+      font-size: 12px;
+      text-transform: uppercase;
     }
+  }
 }
