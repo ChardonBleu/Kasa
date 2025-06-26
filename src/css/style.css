@@ -180,6 +180,36 @@ a.active {
     aspect-ratio: 1.48;
   }
 }
+.collapse {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.collapse__title {
+  color: white;
+  font-size: 24px;
+  background-color: #ff6060;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 52px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+.collapse__description {
+  background-color: #f6f6f6;
+  color: black;
+}
+
+.collapses {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
 .error {
   display: flex;
   flex-direction: column;

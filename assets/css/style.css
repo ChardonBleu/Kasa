@@ -93,7 +93,7 @@ a.active {
   height: 223px;
   width: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
 }
 .banner__text {
   background: rgba(0, 0, 0, 0.5);
@@ -106,11 +106,7 @@ a.active {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 48px;
-  text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -150,7 +146,7 @@ a.active {
   width: 100%;
   aspect-ratio: 1;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   border-radius: 10px;
 }
 .card__link {
@@ -159,11 +155,7 @@ a.active {
   position: absolute;
   top: 0px;
   left: 0px;
-  background: linear-gradient(
-    white 0%,
-    rgba(10, 10, 10, 0) 42%,
-    rgba(4, 4, 4, 0.41) 100%
-  );
+  background: linear-gradient(white 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.41) 100%);
   display: flex;
   justify-content: left;
   align-items: end;
@@ -190,6 +182,38 @@ a.active {
     aspect-ratio: 1.48;
   }
 }
+.collapse {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.collapse__title {
+  color: white;
+  font-size: 24px;
+  background-color: #ff6060;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 52px;
+  padding-right: 10px;
+  padding-left: 10px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+.collapse__description {
+  background-color: #f6f6f6;
+  color: black;
+}
+
+.collapses {
+  width: 70%;
+  margin: auto;
+  margin-bottom: 50px;
+  border-color: red;
+  border-style: solid;
+}
+
 .error {
   display: flex;
   flex-direction: column;
@@ -248,4 +272,4 @@ a.active {
     background-color: transparent;
     padding: 0;
   }
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
