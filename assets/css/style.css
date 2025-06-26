@@ -93,7 +93,7 @@ a.active {
   height: 223px;
   width: 100%;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .banner__text {
   background: rgba(0, 0, 0, 0.5);
@@ -106,10 +106,16 @@ a.active {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 48px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.banner__text-shadow {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 
@@ -137,31 +143,35 @@ a.active {
     padding-left: 10px;
   }
 }
-.card {
+.housingCard {
   width: 30%;
   aspect-ratio: 1;
   position: relative;
 }
-.card__img {
+.housingCard__img {
   width: 100%;
   aspect-ratio: 1;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 10px;
 }
-.card__link {
+.housingCard__link {
   width: 100%;
   aspect-ratio: 1;
   position: absolute;
   top: 0px;
   left: 0px;
-  background: linear-gradient(white 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.41) 100%);
+  background: linear-gradient(
+    white 0%,
+    rgba(10, 10, 10, 0) 42%,
+    rgba(4, 4, 4, 0.41) 100%
+  );
   display: flex;
   justify-content: left;
   align-items: end;
   border-radius: 10px;
 }
-.card__link p {
+.housingCard__link p {
   padding-left: 10px;
   color: white;
   font-family: "Montserrat", sans-serif;
@@ -169,26 +179,30 @@ a.active {
 }
 
 @media only screen and (max-width: 768px) {
-  .card {
+  .housingCard {
     width: 100%;
     aspect-ratio: 1.48;
   }
-  .card__img {
+  .housingCard__img {
     width: 100%;
     aspect-ratio: 1.48;
   }
-  .card__link {
+  .housingCard__link {
     width: 100%;
     aspect-ratio: 1.48;
   }
 }
-.collapse {
+.aboutCard {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
+  margin-bottom: 15px;
 }
-.collapse__title {
+.aboutCard__title {
   color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
   font-size: 24px;
   background-color: #ff6060;
   flex-direction: row;
@@ -200,20 +214,91 @@ a.active {
   padding-left: 10px;
   margin-top: 20px;
   border-radius: 5px;
+  z-index: 10;
 }
-.collapse__description {
-  background-color: #f6f6f6;
+.aboutCard__chevron {
+  transform: rotate(180deg);
+  transition: transform 300ms ease-in-out;
+}
+.aboutCard__chevron-uncollapsed {
+  transform: rotate(0deg);
+  transition: transform 300ms ease-in-out;
+}
+.aboutCard__description {
+  background-color: rgba(246, 246, 246, 0.45);
   color: black;
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  padding-left: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  opacity: 0;
+  height: 0px;
+  transform: translateY(-50px);
+}
+.aboutCard__description-animate.collapsed {
+  animation: collapseAboutCard 300ms ease-in-out forwards;
+}
+.aboutCard__description-animate.uncollapsed {
+  animation: uncollapseAboutCard 300ms ease-in-out forwards;
 }
 
+@media only screen and (max-width: 768px) {
+  .aboutCard__title {
+    font-size: 13px;
+    height: 30px;
+  }
+  .aboutCard__title-chevron {
+    width: 16px;
+  }
+  .aboutCard__description {
+    font-size: 12px;
+  }
+}
+@keyframes uncollapseAboutCard {
+  0% {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    opacity: 0;
+    height: 0px;
+    transform: translateY(-50px);
+  }
+  100% {
+    padding-top: 25px;
+    padding-bottom: 15px;
+    opacity: 1;
+    height: auto;
+    transform: translateY(-10px);
+  }
+}
+@keyframes collapseAboutCard {
+  0% {
+    padding-top: 25px;
+    padding-bottom: 15px;
+    opacity: 1;
+    height: auto;
+    transform: translateY(-10px);
+  }
+  100% {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    opacity: 0;
+    height: 0px;
+    transform: translateY(-50px);
+  }
+}
 .collapses {
-  width: 70%;
+  width: 80%;
   margin: auto;
   margin-bottom: 50px;
-  border-color: red;
-  border-style: solid;
 }
 
+@media only screen and (max-width: 768px) {
+  .collapses {
+    width: 100%;
+  }
+}
 .error {
   display: flex;
   flex-direction: column;
@@ -272,4 +357,4 @@ a.active {
     background-color: transparent;
     padding: 0;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */

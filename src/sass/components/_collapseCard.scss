@@ -1,25 +1,104 @@
-.collapse {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+.aboutCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: 15px;
 
+  &__title {
+    color: white;
+    @include montserrat-bold;
+    font-size: 24px;
+    background-color: $red-light;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 52px;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    z-index: 10;
+  }
+
+  &__chevron {
+    transform: rotate(180deg);
+    transition: transform $base-duration ease-in-out;
+    &-uncollapsed {
+      transform: rotate(0deg);
+      transition: transform $base-duration ease-in-out;
+    }
+  }
+  &__description {
+    background-color: $grey-collapse;
+    color: black;
+    font-size: 18px;
+    @include montserrat-regular;
+    padding-left: 20px;
+
+    padding-top: 0px;
+    padding-bottom: 0px;
+    opacity: 0;
+    height: 0px;
+    transform: translateY(-50px);
+
+    &-animate {
+      &.collapsed {
+        animation: collapseAboutCard $base-duration ease-in-out forwards;
+      }
+      &.uncollapsed {
+        animation: uncollapseAboutCard $base-duration ease-in-out forwards;
+      }
+    }
+  }
+}
+
+@media #{$medium-up} {
+  .aboutCard {
     &__title {
-        color: white;
-        font-size: 24px;
-        background-color: $red-light;
-        flex-direction: row;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 52px;
-        padding-right:10px;
-        padding-left: 10px;
-        margin-top: 20px;
-        border-radius: 5px;
+      font-size: 13px;
+      height: 30px;
+      &-chevron {
+        width: 16px;
+      }
     }
     &__description {
-        background-color: $grey-light;
-        color:black;
+      font-size: 12px;
     }
+  }
+}
 
+@keyframes uncollapseAboutCard {
+  0% {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    opacity: 0;
+    height: 0px;
+    transform: translateY(-50px);
+  }
+  100% {
+    padding-top: 25px;
+    padding-bottom: 15px;
+    opacity: 1;
+    height: auto;
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes collapseAboutCard {
+  0% {
+    padding-top: 25px;
+    padding-bottom: 15px;
+    opacity: 1;
+    height: auto;
+    transform: translateY(-10px);
+  }
+  100% {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    opacity: 0;
+    height: 0px;
+    transform: translateY(-50px);
+  }
 }

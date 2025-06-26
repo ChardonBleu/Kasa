@@ -1,4 +1,4 @@
-.card {
+.housingCard {
   width: 30%;
   aspect-ratio: 1;
   position: relative;
@@ -28,7 +28,7 @@
 }
 
 @media #{$medium-up} {
-  .card {
+  .housingCard {
     width: 100%;
     aspect-ratio: 1.48;
     &__img {
