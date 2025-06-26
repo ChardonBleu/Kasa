@@ -1,0 +1,11 @@
+.collapses {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 50px;
+}
+
+@media #{$medium-up} {
+  .collapses {
+    width: 100%;
+  }
+}
