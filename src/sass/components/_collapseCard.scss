@@ -59,7 +59,11 @@
     &__title {
       font-size: 13px;
       height: 30px;
-      &-chevron {
+      margin-top: 10px;
+    }
+    &__chevron {
+      width: 16px;
+      &-uncollapsed {
         width: 16px;
       }
     }

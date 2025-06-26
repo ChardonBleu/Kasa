@@ -105,11 +105,7 @@ a.active {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 48px;
-  text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -159,11 +155,7 @@ a.active {
   position: absolute;
   top: 0px;
   left: 0px;
-  background: linear-gradient(
-    white 0%,
-    rgba(10, 10, 10, 0) 42%,
-    rgba(4, 4, 4, 0.41) 100%
-  );
+  background: linear-gradient(white 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.41) 100%);
   display: flex;
   justify-content: left;
   align-items: end;
@@ -246,8 +238,12 @@ a.active {
   .aboutCard__title {
     font-size: 13px;
     height: 30px;
+    margin-top: 10px;
   }
-  .aboutCard__title-chevron {
+  .aboutCard__chevron {
+    width: 16px;
+  }
+  .aboutCard__chevron-uncollapsed {
     width: 16px;
   }
   .aboutCard__description {
