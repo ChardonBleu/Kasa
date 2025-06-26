@@ -1,0 +1,43 @@
+.card {
+  width: 30%;
+  aspect-ratio: 1;
+  position: relative;
+  &__img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+  &__link {
+    width: 100%;
+    aspect-ratio: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: linear-gradient(white 0%, $shadow1 42%, $shadow2 100%);
+    display: flex;
+    justify-content: left;
+    align-items: end;
+    border-radius: 10px;
+    p {
+      padding-left: 10px;
+      color: white;
+      @include montserrat-bold;
+    }
+  }
+}
+
+@media #{$medium-up} {
+  .card {
+    width: 100%;
+    aspect-ratio: 1.48;
+    &__img {
+      width: 100%;
+      aspect-ratio: 1.48;
+    }
+    &__link {
+      width: 100%;
+      aspect-ratio: 1.48;
+    }
+  }
+}

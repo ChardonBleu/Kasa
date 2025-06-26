@@ -26,7 +26,158 @@ a.active {
 
 @media only screen and (max-width: 768px) {
   main {
-    width: 95%;
+    width: 92%;
+  }
+}
+.header {
+  margin-top: 45px;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 85%;
+  margin: auto;
+}
+.header__nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 57px;
+  color: black;
+  font-size: 24px;
+}
+
+@media only screen and (max-width: 768px) {
+  .header {
+    margin-top: 20px;
+    margin-bottom: 27px;
+    width: 92%;
+  }
+  .header__nav {
+    gap: 26px;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+}
+.footer {
+  color: white;
+  background-color: black;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+  padding-top: 80px;
+  padding-bottom: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+  .footer {
+    font-size: 12px;
+    gap: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  .footer p {
+    width: 115px;
+    text-align: center;
+  }
+}
+.banner {
+  margin-bottom: 43px;
+  margin-top: 50px;
+  position: relative;
+}
+.banner__img {
+  border-radius: 20px;
+  height: 223px;
+  width: 100%;
+  object-fit: cover;
+}
+.banner__text {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  width: 100%;
+  height: 223px;
+  position: absolute;
+  top: 0;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: 48px;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+@media only screen and (max-width: 992px) {
+  .banner__img {
+    height: 150px;
+  }
+  .banner__text {
+    height: 150px;
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .banner__img {
+    height: 111px;
+  }
+  .banner__text {
+    height: 111px;
+    font-size: 24px;
+    justify-content: left;
+    box-shadow: none;
+    text-shadow: none;
+  }
+  .banner__text p {
+    padding-left: 10px;
+  }
+}
+.card {
+  width: 30%;
+  aspect-ratio: 1;
+  position: relative;
+}
+.card__img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.card__link {
+  width: 100%;
+  aspect-ratio: 1;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: linear-gradient(white 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.41) 100%);
+  display: flex;
+  justify-content: left;
+  align-items: end;
+  border-radius: 10px;
+}
+.card__link p {
+  padding-left: 10px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+}
+
+@media only screen and (max-width: 768px) {
+  .card {
+    width: 100%;
+    aspect-ratio: 1.48;
+  }
+  .card__img {
+    width: 100%;
+    aspect-ratio: 1.48;
+  }
+  .card__link {
+    width: 100%;
+    aspect-ratio: 1.48;
   }
 }
 .error {
@@ -69,58 +220,23 @@ a.active {
     font-size: 14px;
   }
 }
-.header {
-  margin-top: 45px;
-  margin-bottom: 50px;
+.cards {
+  background-color: #f6f6f6;
+  border-radius: 25px;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 85%;
-  margin: auto;
-}
-.header__nav {
-  display: flex;
-  justify-content: space-between;
-  gap: 57px;
-  color: black;
-  font-size: 24px;
+  justify-content: left;
+  flex-wrap: wrap;
+  gap: 40px 5%;
+  padding: 5%;
 }
 
 @media only screen and (max-width: 768px) {
-  .header {
-    margin-top: 20px;
-    margin-bottom: 27px;
-    width: 95%;
-  }
-  .header__nav {
-    gap: 26px;
-    font-size: 12px;
-    text-transform: uppercase;
-  }
-}
-.footer {
-  color: white;
-  background-color: black;
-  font-size: 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 25px;
-  padding-top: 80px;
-  padding-bottom: 15px;
-}
-
-@media only screen and (max-width: 768px) {
-  .footer {
-    font-size: 12px;
-    gap: 0px;
-    padding-top: 50px;
-    padding-bottom: 50px;
-  }
-  .footer p {
-    width: 115px;
-    text-align: center;
+  .cards {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    background-color: transparent;
+    padding: 0;
   }
 }
 

@@ -1,0 +1,19 @@
+.cards {
+  background-color: $grey-light;
+  border-radius: 25px;
+  display: flex;
+  justify-content: left;
+  flex-wrap: wrap;
+  gap: 40px 5%;
+  padding: 5%;
+}
+
+@media #{$medium-up} {
+  .cards {
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    background-color: transparent;
+    padding: 0;
+  }
+}
