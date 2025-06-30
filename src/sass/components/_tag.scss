@@ -1,0 +1,15 @@
+.tag {
+    background-color: $red-light;
+    @include montserrat-bold;
+    border-radius: 10px;
+    font-size: 14px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+
+}

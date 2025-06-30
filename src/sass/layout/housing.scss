@@ -1,0 +1,73 @@
+.housing {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 50px;
+    @include montserrat-regular;
+
+    &__carousel {
+        width: 100%;
+        color:black;
+        position:relative;
+        
+        img {
+            border-radius: 25px;
+            object-fit: cover;
+            height: 415px;
+            width: 100%;
+        }
+        &-pagination {
+            color:white;
+            position:absolute;
+            bottom: 20px;
+            left:50%;
+        }
+    }
+
+    &__title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+
+        &-name {
+            font-size: 36px;
+            color: $red-light;
+            font-weight: 500;
+        }
+
+        &-location {
+            font-size: 18px;
+            color:black;
+            font-weight: 500;
+        }
+
+        &-host {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+            
+        &-hostname {
+            font-size: 18px;
+            color: $red-light;
+        }
+
+        img {
+                border-radius: 50%;
+                width: 64px;
+        }
+    }
+
+    
+    &__tags {
+        font-size: 14px;
+        display:flex;
+        gap:10px;
+        color: white;
+    }
+    &__collapses {
+        display: flex;
+    }
+}
