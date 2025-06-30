@@ -18,9 +18,9 @@ main {
 a {
   text-decoration: none;
   color: black;
+  cursor: pointer;
 }
-
-a.active {
+a.active, a:hover {
   text-decoration: underline;
 }
 
@@ -205,6 +205,10 @@ a.active {
   margin-top: 20px;
   border-radius: 5px;
   z-index: 10;
+  cursor: pointer;
+}
+.aboutCard__title:hover {
+  font-size: 26px;
 }
 .aboutCard__chevron {
   transform: rotate(180deg);

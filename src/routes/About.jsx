@@ -1,5 +1,5 @@
 import Banner from "../components/Banner.jsx";
-import AboutCard from "../components/AboutCard.jsx";
+import Collapse from "../components/Collapse.jsx";
 
 const fiabilityText =
   "Les annonces postées sur Kasa garantissent une fiabilité totale. Les photos sont conformes aux logements, et toutes les informations sont régulièrement vérifiées  par nos équipes.";
@@ -15,10 +15,10 @@ export default function About() {
     <>
       <Banner text={null} url="bannerAbout.png" />
       <div className="collapses">
-        <AboutCard title="Fiabilité" text={fiabilityText} />
-        <AboutCard title="Respect" text={respectText} />
-        <AboutCard title="Service" text={serviceText} />
-        <AboutCard title="Sécurité" text={securityText} />
+        <Collapse title="Fiabilité" text={fiabilityText} />
+        <Collapse title="Respect" text={respectText} />
+        <Collapse title="Service" text={serviceText} />
+        <Collapse title="Sécurité" text={securityText} />
       </div>
     </>
   );

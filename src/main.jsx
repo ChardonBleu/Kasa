@@ -5,7 +5,7 @@ import Housing from "./routes/Housing.jsx";
 import About from "./routes/About.jsx";
 import Error404 from "./routes/Error404.jsx";
 import Kasa from "./routes/Kasa.jsx";
-import NotFoundRedirect from "./components/RedirectEroor.jsx";
+import NotFoundRedirect from "./components/RedirectError.jsx";
 
 async function getHousings() {
   const response = await fetch("datas/datas.json");
@@ -28,6 +28,9 @@ async function getHousing(id) {
   }
 }
 
+// Choix du mode Data de React-router v7
+// https://reactrouter.com/start/data/installation
+//
 const router = createBrowserRouter([
   {
     path: "Kasa",

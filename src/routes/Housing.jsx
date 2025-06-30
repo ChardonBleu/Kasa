@@ -11,9 +11,12 @@ export default function Housing() {
 
   return (
     <>
-      <div>
+      <section>
+        <div className="carousel">
+          <img src={housing.pictures[0]} alt="photo logement" />
+        </div>
         <p>Détail du logement {housing.title}</p>
-      </div>
+      </section>
     </>
   );
 }

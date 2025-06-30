@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function AboutCard({ title, text }) {
+export default function InfoCard({ title, text }) {
   const [isCollapsed, setIsCollapsed] = useState(true);
   const [hasInteracted, setHasInteracted] = useState(false);
 
@@ -14,7 +14,7 @@ export default function AboutCard({ title, text }) {
   return (
     <>
       <article className="aboutCard">
-        <div className="aboutCard__title">
+        <div className="aboutCard__title" onClick={toggleCollapse}>
           <p>{title}</p>
           <img
             src="arrow.png"
@@ -24,7 +24,6 @@ export default function AboutCard({ title, text }) {
                 ? "aboutCard__chevron"
                 : "aboutCard__chevron-uncollapsed"
             }
-            onClick={toggleCollapse}
           />
         </div>
 
