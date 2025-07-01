@@ -443,6 +443,22 @@ div {
   bottom: 20px;
   left: 50%;
 }
+.housing__carousel-chevron-left {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  font-size: 72px;
+  cursor: pointer;
+}
+.housing__carousel-chevron-right {
+  color: white;
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  font-size: 72px;
+  cursor: pointer;
+}
 .housing__title {
   display: flex;
   justify-content: space-between;
@@ -512,6 +528,12 @@ div {
   .housing__carousel img {
     height: 350px;
   }
+  .housing__carousel-chevron-left {
+    font-size: 52px;
+  }
+  .housing__carousel-chevron-right {
+    font-size: 52px;
+  }
   .housing__title-name {
     font-size: 24px;
   }
@@ -533,6 +555,12 @@ div {
 @media only screen and (max-width: 768px) {
   .housing__carousel img {
     height: 255px;
+  }
+  .housing__carousel-chevron-left {
+    font-size: 24px;
+  }
+  .housing__carousel-chevron-right {
+    font-size: 24px;
   }
   .housing__title {
     flex-direction: column;
