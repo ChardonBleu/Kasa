@@ -1,73 +1,169 @@
 .housing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+  @include montserrat-regular;
+  &__carousel {
+    width: 100%;
+    color: black;
+    position: relative;
+
+    img {
+      border-radius: 25px;
+      object-fit: cover;
+      height: 415px;
+      width: 100%;
+    }
+    &-pagination {
+      color: white;
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+    }
+  }
+
+  &__title {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+
+    &-name {
+      font-size: 36px;
+      color: $red-light;
+      font-weight: 500;
+      margin-top: 10px;
+      margin-bottom: 0;
+    }
+
+    &-location {
+      font-size: 18px;
+      color: black;
+      font-weight: 500;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+
+    &-tags {
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      color: white;
+      gap: 15px;
+    }
+  }
+
+  &__host {
+    display: flex;
     flex-direction: column;
-    margin-top: 50px;
-    @include montserrat-regular;
+    align-items: flex-end;
+    &-hostname {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 18px;
+      color: $red-light;
+      text-align: right;
+      padding-left: 10px;
+      img {
+        border-radius: 50%;
+        width: 64px;
+      }
+    }
+    &-rating {
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }
+  }
 
+  &__collapses {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    article {
+      width: 45%;
+    }
+    &-equipment {
+      margin-bottom: 5px;
+      margin-top: 0;
+      padding: 0;
+    }
+  }
+}
+
+@media #{$large-up} {
+  .housing {
     &__carousel {
-        width: 100%;
-        color:black;
-        position:relative;
-        
-        img {
-            border-radius: 25px;
-            object-fit: cover;
-            height: 415px;
-            width: 100%;
-        }
-        &-pagination {
-            color:white;
-            position:absolute;
-            bottom: 20px;
-            left:50%;
-        }
+      img {
+        height: 350px;
+      }
     }
-
     &__title {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
+      &-name {
+        font-size: 24px;
+      }
 
-        &-name {
-            font-size: 36px;
-            color: $red-light;
-            font-weight: 500;
-        }
-
-        &-location {
-            font-size: 18px;
-            color:black;
-            font-weight: 500;
-        }
-
-        &-host {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-            
-        &-hostname {
-            font-size: 18px;
-            color: $red-light;
-        }
-
-        img {
-                border-radius: 50%;
-                width: 64px;
-        }
-    }
-
-    
-    &__tags {
+      &-location {
         font-size: 14px;
-        display:flex;
-        gap:10px;
-        color: white;
+      }
+
+      &-tags {
+        font-size: 12px;
+        flex-wrap: wrap;
+        gap: 10px 10px;
+      }
     }
-    &__collapses {
-        display: flex;
+    &__host {
+      &-hostname {
+        font-size: 14px;
+        img {
+          width: 48px;
+        }
+      }
     }
+  }
+}
+
+@media #{$medium-up} {
+  .housing {
+    &__carousel {
+      img {
+        height: 255px;
+      }
+    }
+    &__title {
+      flex-direction: column;
+      width: 100%;
+      &-name {
+        font-size: 18px;
+      }
+
+      &-location {
+        font-size: 14px;
+      }
+
+      &-tags {
+        font-size: 10px;
+        flex-wrap: wrap;
+        gap: 10px 10px;
+      }
+    }
+    &__host {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      &-hostname {
+        font-size: 12px;
+        img {
+          width: 32px;
+        }
+      }
+    }
+  }
 }

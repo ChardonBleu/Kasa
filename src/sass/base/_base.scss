@@ -17,12 +17,16 @@ a {
   text-decoration: none;
   color: black;
   cursor: pointer;
-  &.active, &:hover {
+  &.active,
+  &:hover {
     text-decoration: underline;
   }
-  
 }
 
+div {
+  margin: 0;
+  padding: 0;
+}
 
 @media #{$medium-up} {
   main {
