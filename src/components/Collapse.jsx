@@ -13,22 +13,22 @@ export default function InfoCard({ title, text }) {
 
   return (
     <>
-      <article className="aboutCard">
-        <div className="aboutCard__title" onClick={toggleCollapse}>
+      <article className="collapse">
+        <div className="collapse__title" onClick={toggleCollapse}>
           <p>{title}</p>
           <img
             src="arrow.png"
             alt="chevron"
             className={
               isCollapsed
-                ? "aboutCard__chevron"
-                : "aboutCard__chevron-uncollapsed"
+                ? "collapse__chevron"
+                : "collapse__chevron-uncollapsed"
             }
           />
         </div>
 
         <div
-          className={`aboutCard__description ${hasInteracted ? "aboutCard__description-animate" : ""} ${isCollapsed ? "collapsed" : "uncollapsed"}`}
+          className={`collapse__description ${hasInteracted ? "collapse__description-animate" : ""} ${isCollapsed ? "collapsed" : "uncollapsed"}`}
         >
           {text}
         </div>

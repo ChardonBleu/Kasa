@@ -1,4 +1,4 @@
-.aboutCard {
+.collapse {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,11 +18,11 @@
     padding-right: 10px;
     padding-left: 10px;
     margin-top: 20px;
-    border-radius: 5px;
+    border-radius: 10px;
     z-index: 10;
     cursor: pointer;
     &:hover {
-      font-size: 26px;
+      font-size: 25px;
     }
   }
 
@@ -58,12 +58,26 @@
   }
 }
 
+@media #{$large-up} {
+  .collapse {
+    &__title {
+      font-size: 18px;
+      &:hover {
+        font-size: 19px;
+      }
+    }
+  }
+}
+
 @media #{$medium-up} {
-  .aboutCard {
+  .collapse {
     &__title {
       font-size: 13px;
       height: 30px;
       margin-top: 10px;
+      &:hover {
+        font-size: 14px;
+      }
     }
     &__chevron {
       width: 16px;

@@ -1,1 +1,32 @@
-/*# sourceMappingURL=housing.css.map */
+.housing {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+}
+.housing__carousel {
+  width: 100%;
+}
+.housing__carousel color:black img {
+  border-radius: 25px;
+}
+.housing__title {
+  font-size: 36px;
+}
+.housing__hostname {
+  font-size: 18px;
+}
+.housing__location {
+  font-size: 18px;
+  color: black;
+}
+.housing__tags {
+  font-size: 14px;
+  display: flex;
+  gap: 10px;
+  color: white;
+}
+.housing__collapses {
+  display: flex;
+} /*# sourceMappingURL=housing.css.map */
