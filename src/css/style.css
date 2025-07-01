@@ -20,7 +20,8 @@ a {
   color: black;
   cursor: pointer;
 }
-a.active, a:hover {
+a.active,
+a:hover {
   text-decoration: underline;
 }
 
@@ -110,7 +111,11 @@ div {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 48px;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -160,7 +165,11 @@ div {
   position: absolute;
   top: 0px;
   left: 0px;
-  background: linear-gradient(white 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.41) 100%);
+  background: linear-gradient(
+    white 0%,
+    rgba(10, 10, 10, 0) 42%,
+    rgba(4, 4, 4, 0.41) 100%
+  );
   display: flex;
   justify-content: left;
   align-items: end;
@@ -446,7 +455,7 @@ div {
 .housing__carousel-chevron-left {
   color: white;
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 10px;
   font-size: 72px;
   cursor: pointer;
@@ -454,7 +463,7 @@ div {
 .housing__carousel-chevron-right {
   color: white;
   position: absolute;
-  top: 50%;
+  top: 40%;
   right: 10px;
   font-size: 72px;
   cursor: pointer;
@@ -530,9 +539,11 @@ div {
   }
   .housing__carousel-chevron-left {
     font-size: 52px;
+    top: 42%;
   }
   .housing__carousel-chevron-right {
     font-size: 52px;
+    top: 42%;
   }
   .housing__title-name {
     font-size: 24px;
@@ -558,9 +569,11 @@ div {
   }
   .housing__carousel-chevron-left {
     font-size: 24px;
+    top: 45%;
   }
   .housing__carousel-chevron-right {
     font-size: 24px;
+    top: 45%;
   }
   .housing__title {
     flex-direction: column;

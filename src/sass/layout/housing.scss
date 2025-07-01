@@ -25,7 +25,7 @@
     &-chevron-left {
       color: white;
       position: absolute;
-      top: 50%;
+      top: 40%;
       left: 10px;
       font-size: 72px;
       cursor: pointer;
@@ -33,7 +33,7 @@
     &-chevron-right {
       color: white;
       position: absolute;
-      top: 50%;
+      top: 40%;
       right: 10px;
       font-size: 72px;
       cursor: pointer;
@@ -119,9 +119,11 @@
       }
       &-chevron-left {
         font-size: 52px;
+        top: 42%;
       }
       &-chevron-right {
         font-size: 52px;
+        top: 42%;
       }
     }
     &__title {
@@ -158,9 +160,11 @@
       }
       &-chevron-left {
         font-size: 24px;
+        top: 45%;
       }
       &-chevron-right {
         font-size: 24px;
+        top: 45%;
       }
     }
     &__title {
