@@ -8,37 +8,46 @@ import Collapse from "../components/Collapse.jsx";
 export default function Housing() {
   const { housing } = useLoaderData();
 
-  const [currentImage, setCurrentImage] = useState(housing.pictures[0])
-  const maxIndex = housing.pictures.length - 1
+  const [currentImage, setCurrentImage] = useState(
+    housing ? housing.pictures[0] : "",
+  );
 
-  const firstName = housing.host.name.split(" ")[0];
-  const lastName = housing.host.name.split(" ")[1];
+  if (!housing) {
+    return <Navigate to="/Kasa/404" replace />;
+  }
+
+  const maxIndex = housing ? housing.pictures.length - 1 : 0;
+
+  const firstName = housing ? housing.host.name.split(" ")[0] : "";
+  const lastName = housing ? housing.host.name.split(" ")[1] : "";
 
   function navigateLeft() {
-    let currentIndex = housing.pictures.indexOf(currentImage)
-    let nextIndex  = currentIndex === maxIndex ?  0 : currentIndex + 1
-    setCurrentImage(housing.pictures[nextIndex])
+    let currentIndex = housing.pictures.indexOf(currentImage);
+    setCurrentImage(
+      housing.pictures[currentIndex === 0 ? maxIndex : currentIndex - 1],
+    );
   }
 
   function navigateRight() {
-    let currentIndex = housing.pictures.indexOf(currentImage)
-    let nextIndex  = currentIndex === 0 ?  maxIndex : currentIndex - 1
-    setCurrentImage(housing.pictures[nextIndex])
+    let currentIndex = housing.pictures.indexOf(currentImage);
+    setCurrentImage(
+      housing.pictures[currentIndex === maxIndex ? 0 : currentIndex + 1],
+    );
   }
 
   function Chevrons() {
     return (
       <>
-        <i className="fa-solid fa-chevron-left housing__carousel-chevron-left" onClick={navigateLeft}></i>
-        <i className="fa-solid fa-chevron-right housing__carousel-chevron-right" onClick={navigateRight}></i>
+        <i
+          className="fa-solid fa-chevron-left housing__carousel-chevron-left"
+          onClick={navigateLeft}
+        ></i>
+        <i
+          className="fa-solid fa-chevron-right housing__carousel-chevron-right"
+          onClick={navigateRight}
+        ></i>
       </>
-    )
-  }
-
-
-
-  if (!housing) {
-    return <Navigate to="/Kasa/404" replace />;
+    );
   }
 
   return (
@@ -47,10 +56,10 @@ export default function Housing() {
         <div className="housing__carousel">
           <img src={currentImage} alt="photo logement" />
           <div className="housing__carousel-pagination">
-            {housing.pictures.indexOf(housing.pictures[0]) + 1}/
+            {housing.pictures.indexOf(currentImage) + 1}/
             {housing.pictures.length}
           </div>
-          {housing.pictures.length > 1 ? < Chevrons /> : `` }
+          {housing.pictures.length > 1 ? <Chevrons /> : ``}
         </div>
 
         <div className="housing__title">
@@ -84,7 +93,9 @@ export default function Housing() {
           <Collapse
             title="Equipement"
             text={housing.equipments.map((equipment) => (
-              <p key={equipment} className="housing__collapses-equipment">{equipment}</p>
+              <p key={equipment} className="housing__collapses-equipment">
+                {equipment}
+              </p>
             ))}
           />
         </div>
