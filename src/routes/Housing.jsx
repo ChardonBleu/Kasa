@@ -1,4 +1,4 @@
-// import { useParams } from 'react-router';
+import { useState } from "react";
 import { useLoaderData } from "react-router";
 import { Navigate } from "react-router";
 import TagCard from "../components/TagCard.jsx";
@@ -8,8 +8,34 @@ import Collapse from "../components/Collapse.jsx";
 export default function Housing() {
   const { housing } = useLoaderData();
 
+  const [currentImage, setCurrentImage] = useState(housing.pictures[0])
+  const maxIndex = housing.pictures.length - 1
+
   const firstName = housing.host.name.split(" ")[0];
   const lastName = housing.host.name.split(" ")[1];
+
+  function navigateLeft() {
+    let currentIndex = housing.pictures.indexOf(currentImage)
+    let nextIndex  = currentIndex === maxIndex ?  0 : currentIndex + 1
+    setCurrentImage(housing.pictures[nextIndex])
+  }
+
+  function navigateRight() {
+    let currentIndex = housing.pictures.indexOf(currentImage)
+    let nextIndex  = currentIndex === 0 ?  maxIndex : currentIndex - 1
+    setCurrentImage(housing.pictures[nextIndex])
+  }
+
+  function Chevrons() {
+    return (
+      <>
+        <i className="fa-solid fa-chevron-left housing__carousel-chevron-left" onClick={navigateLeft}></i>
+        <i className="fa-solid fa-chevron-right housing__carousel-chevron-right" onClick={navigateRight}></i>
+      </>
+    )
+  }
+
+
 
   if (!housing) {
     return <Navigate to="/Kasa/404" replace />;
@@ -19,11 +45,12 @@ export default function Housing() {
     <>
       <section className="housing">
         <div className="housing__carousel">
-          <img src={housing.pictures[0]} alt="photo logement" />
+          <img src={currentImage} alt="photo logement" />
           <div className="housing__carousel-pagination">
             {housing.pictures.indexOf(housing.pictures[0]) + 1}/
             {housing.pictures.length}
           </div>
+          {housing.pictures.length > 1 ? < Chevrons /> : `` }
         </div>
 
         <div className="housing__title">
@@ -32,7 +59,7 @@ export default function Housing() {
             <h3 className="housing__title-location">{housing.location}</h3>
             <div className="housing__title-tags">
               {housing.tags.map((tag) => (
-                <TagCard tag={tag} />
+                <TagCard key={housing.tags.indexOf(tag) + tag} tag={tag} />
               ))}
             </div>
           </div>
@@ -57,7 +84,7 @@ export default function Housing() {
           <Collapse
             title="Equipement"
             text={housing.equipments.map((equipment) => (
-              <p className="housing__collapses-equipment">{equipment}</p>
+              <p key={equipment} className="housing__collapses-equipment">{equipment}</p>
             ))}
           />
         </div>

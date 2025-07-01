@@ -6,6 +6,7 @@ export default function RatingStars({ rating }) {
       <div className="stars">
         {notes.map((note) => (
           <i
+            key={note}
             className={`fa-solid fa-star stars__star ${note <= rating ? "stars__star-active" : ""} `}
           ></i>
         ))}
