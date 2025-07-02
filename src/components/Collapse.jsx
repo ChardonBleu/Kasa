@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function InfoCard({ title, text }) {
+export default function Collapse({ title, text }) {
   const [isCollapsed, setIsCollapsed] = useState(true);
   const [hasInteracted, setHasInteracted] = useState(false);
 

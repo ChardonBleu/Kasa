@@ -1,6 +1,6 @@
 import kasaBW from "/logoBW.png";
 
-export default function Header() {
+export default function Footer() {
   return (
     <>
       <footer className="footer">
