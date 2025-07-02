@@ -2,7 +2,7 @@
 
 Ce dépôt correspond au Projet 11 de la formation Javascript React d'Openclassrooms.
 
-Il s'agit d'une applicattion React
+Il s'agit d'une applicattion React v19 avec React Router v7.
 
 ## Exécution en local
 
@@ -15,7 +15,7 @@ git clone https://github.com/ChardonBleu/Kasa.git
 Pour lancer l'application:
 
 ```bash
-npm run start
+npm start
 ```
 
 Pour lancer le linter:
@@ -30,12 +30,6 @@ Pour lancer le prettier:
 
 ```bash
 npm run fmt
-```
-
-Pour lancer les tests:
-
-```bash
-npm run test
 ```
 
 ## Hébergement GitHub

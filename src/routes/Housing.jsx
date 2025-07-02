@@ -20,6 +20,7 @@ export default function Housing() {
 
   const firstName = housing ? housing.host.name.split(" ")[0] : "";
   const lastName = housing ? housing.host.name.split(" ")[1] : "";
+
   let currentIndex = housing.pictures.indexOf(currentImage);
 
   function navigateLeft() {
