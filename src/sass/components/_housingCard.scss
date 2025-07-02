@@ -2,12 +2,14 @@
   width: 30%;
   aspect-ratio: 1;
   position: relative;
+
   &__img {
     width: 100%;
     aspect-ratio: 1;
     object-fit: cover;
     border-radius: 10px;
   }
+
   &__link {
     width: 100%;
     aspect-ratio: 1;
@@ -19,6 +21,7 @@
     justify-content: left;
     align-items: end;
     border-radius: 10px;
+
     p {
       padding-left: 10px;
       color: white;
@@ -31,10 +34,12 @@
   .housingCard {
     width: 100%;
     aspect-ratio: 1.48;
+
     &__img {
       width: 100%;
       aspect-ratio: 1.48;
     }
+
     &__link {
       width: 100%;
       aspect-ratio: 1.48;

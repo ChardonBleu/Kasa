@@ -4,9 +4,11 @@
   justify-content: space-between;
   align-items: center;
   gap: 10px;
+
   &__star {
     color: $empty-star;
     font-size: 20px;
+
     &-active {
       color: $red-light;
     }
@@ -16,6 +18,7 @@
 @media #{$large-up} {
   .stars {
     gap: 8px;
+
     &__star {
       font-size: 14px;
     }
@@ -25,6 +28,7 @@
 @media #{$medium-up} {
   .stars {
     gap: 6px;
+
     &__star {
       font-size: 12px;
     }

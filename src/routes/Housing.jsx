@@ -21,15 +21,15 @@ export default function Housing() {
   const firstName = housing ? housing.host.name.split(" ")[0] : "";
   const lastName = housing ? housing.host.name.split(" ")[1] : "";
 
+  let currentIndex = housing.pictures.indexOf(currentImage);
+
   function navigateLeft() {
-    let currentIndex = housing.pictures.indexOf(currentImage);
     setCurrentImage(
       housing.pictures[currentIndex === 0 ? maxIndex : currentIndex - 1],
     );
   }
 
   function navigateRight() {
-    let currentIndex = housing.pictures.indexOf(currentImage);
     setCurrentImage(
       housing.pictures[currentIndex === maxIndex ? 0 : currentIndex + 1],
     );

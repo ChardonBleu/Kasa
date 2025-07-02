@@ -21,6 +21,7 @@
     border-radius: 10px;
     z-index: 10;
     cursor: pointer;
+
     &:hover {
       font-size: 25px;
     }
@@ -29,6 +30,7 @@
   &__chevron {
     transform: rotate(180deg);
     transition: transform $base-duration ease-in-out;
+
     &-uncollapsed {
       transform: rotate(0deg);
       transition: transform $base-duration ease-in-out;
@@ -40,7 +42,6 @@
     font-size: 18px;
     @include montserrat-regular;
     padding-left: 20px;
-
     padding-top: 0px;
     padding-bottom: 0px;
     opacity: 0;
@@ -75,16 +76,19 @@
       font-size: 13px;
       height: 30px;
       margin-top: 10px;
+
       &:hover {
         font-size: 14px;
       }
     }
     &__chevron {
       width: 16px;
+
       &-uncollapsed {
         width: 16px;
       }
     }
+
     &__description {
       font-size: 12px;
     }
