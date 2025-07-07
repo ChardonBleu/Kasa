@@ -18,8 +18,7 @@ a {
   color: black;
   cursor: pointer;
 
-  &.active,
-  &:hover {
+  &.active {
     text-decoration: underline;
   }
 }
