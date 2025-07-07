@@ -21,6 +21,9 @@
     justify-content: left;
     align-items: end;
     border-radius: 10px;
+    &:hover {
+      text-decoration: none;
+    }
 
     p {
       padding-left: 10px;

@@ -20,8 +20,7 @@ a {
   color: black;
   cursor: pointer;
 }
-a.active,
-a:hover {
+a.active {
   text-decoration: underline;
 }
 
@@ -50,6 +49,9 @@ div {
   gap: 57px;
   color: black;
   font-size: 24px;
+}
+.header__nav a:hover {
+  text-decoration: underline;
 }
 
 @media only screen and (max-width: 768px) {
@@ -174,6 +176,9 @@ div {
   justify-content: left;
   align-items: end;
   border-radius: 10px;
+}
+.housingCard__link:hover {
+  text-decoration: none;
 }
 .housingCard__link p {
   padding-left: 10px;

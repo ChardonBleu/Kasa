@@ -23,10 +23,17 @@ export default function Carousel({
     <>
       <div className="housing__carousel">
         <img src={currentImage} alt="photo logement" />
-        <div className="housing__carousel-pagination">
-          {housing.pictures.indexOf(currentImage) + 1}/{housing.pictures.length}
-        </div>
-        {housing.pictures.length > 1 ? <Chevrons /> : ``}
+        {housing.pictures.length > 1 ? (
+          <>
+            <div className="housing__carousel-pagination">
+              {housing.pictures.indexOf(currentImage) + 1}/
+              {housing.pictures.length}
+            </div>
+            <Chevrons />
+          </>
+        ) : (
+          ``
+        )}
       </div>
     </>
   );

@@ -24,8 +24,6 @@ Pour lancer le linter:
 npm run lint
 ```
 
-Des warnings sont encore actifs dûs à l'utilisation de jquery dans le code et à des portions de code pour l'instant inutilisées.
-
 Pour lancer le prettier:
 
 ```bash
