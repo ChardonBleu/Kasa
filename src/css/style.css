@@ -1,8 +1,6 @@
 @import url("https://fonts.cdnfonts.com/css/montserrat");
 body {
   background-color: white;
-  display: flex;
-  flex-direction: column;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-size: 18px;
@@ -10,9 +8,16 @@ body {
   margin-top: 40px;
 }
 
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 main {
   width: 85%;
   margin: auto;
+  flex: 1;
 }
 
 a {
@@ -113,11 +118,7 @@ div {
   font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 48px;
-  text-shadow:
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -167,11 +168,7 @@ div {
   position: absolute;
   top: 0px;
   left: 0px;
-  background: linear-gradient(
-    white 0%,
-    rgba(10, 10, 10, 0) 42%,
-    rgba(4, 4, 4, 0.41) 100%
-  );
+  background: linear-gradient(white 0%, rgba(10, 10, 10, 0) 42%, rgba(4, 4, 4, 0.41) 100%);
   display: flex;
   justify-content: left;
   align-items: end;
@@ -560,6 +557,14 @@ div {
     font-size: 12px;
     flex-wrap: wrap;
     gap: 10px 10px;
+  }
+  .housing__collapses {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .housing__collapses article {
+    width: 100%;
   }
   .housing__host-hostname {
     font-size: 14px;

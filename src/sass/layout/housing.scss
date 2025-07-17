@@ -152,6 +152,15 @@
         gap: 10px 10px;
       }
     }
+    &__collapses {
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      article {
+        width: 100%;
+      }
+    }
     &__host {
       &-hostname {
         font-size: 14px;

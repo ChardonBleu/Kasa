@@ -1,16 +1,21 @@
 body {
   background-color: white;
-  display: flex;
-  flex-direction: column;
   @include montserrat-medium;
   font-size: $base-font-size;
   margin: auto;
   margin-top: 40px;
 }
 
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
 main {
   width: 85%;
   margin: auto;
+  flex: 1;
 }
 
 a {
