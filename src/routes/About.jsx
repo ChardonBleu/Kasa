@@ -15,10 +15,10 @@ export default function About() {
     <>
       <Banner text={null} url="bannerAbout.png" />
       <div className="collapses">
-        <Collapse title="Fiabilité" text={fiabilityText} />
-        <Collapse title="Respect" text={respectText} />
-        <Collapse title="Service" text={serviceText} />
-        <Collapse title="Sécurité" text={securityText} />
+        <Collapse title="Fiabilité"> {fiabilityText} </Collapse>
+        <Collapse title="Respect"> {respectText} </Collapse>
+        <Collapse title="Service"> {serviceText} </Collapse>
+        <Collapse title="Sécurité"> {securityText} </Collapse>
       </div>
     </>
   );

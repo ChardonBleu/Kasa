@@ -44,15 +44,14 @@ export default function Housing() {
         <HousingDetails housing={housing} />
 
         <div className="housing__collapses">
-          <Collapse title="Description" text={housing.description} />
-          <Collapse
-            title="Equipement"
-            text={housing.equipments.map((equipment) => (
+          <Collapse title="Description"> {housing.description} </Collapse>
+          <Collapse title="Equipement">
+            {housing.equipments.map((equipment) => (
               <p key={equipment} className="housing__collapses-equipment">
                 {equipment}
               </p>
             ))}
-          />
+          </Collapse>
         </div>
       </section>
     </>

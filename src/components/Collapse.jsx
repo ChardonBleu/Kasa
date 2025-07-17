@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Collapse({ title, text }) {
+export default function Collapse({ title, children }) {
   const [isCollapsed, setIsCollapsed] = useState(true);
   const [hasInteracted, setHasInteracted] = useState(false);
 
@@ -30,7 +30,7 @@ export default function Collapse({ title, text }) {
         <div
           className={`collapse__description ${hasInteracted ? "collapse__description-animate" : ""} ${isCollapsed ? "collapsed" : "uncollapsed"}`}
         >
-          {text}
+          {children}
         </div>
       </article>
     </>

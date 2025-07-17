@@ -5,13 +5,15 @@ import Footer from "./components/Footer.jsx";
 export default function App() {
   return (
     <>
-      <Header />
+      <div className="app-container">
+        <Header />
 
-      <main>
-        <Outlet />
-      </main>
+        <main>
+          <Outlet />
+        </main>
 
-      <Footer />
+        <Footer />
+      </div>
     </>
   );
 }
